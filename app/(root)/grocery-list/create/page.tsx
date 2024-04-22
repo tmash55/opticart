@@ -1,6 +1,6 @@
 import GroceryListForm from "@/components/shared/GroceryListForm";
 import EventForm from "@/components/shared/GroceryListForm";
-import { auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 
 const CreateGroceryList = () => {
   const { sessionClaims } = auth();
@@ -16,7 +16,7 @@ const CreateGroceryList = () => {
       </section>
 
       <div className="wrapper my-8">
-        <GroceryListForm userId={userId} type="Create" />
+        <GroceryListForm />
       </div>
     </>
   );
